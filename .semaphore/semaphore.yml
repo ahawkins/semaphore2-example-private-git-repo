@@ -1,0 +1,20 @@
+version: v1.0
+name: First pipeline example
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+
+blocks:
+  - name: "Test"
+    task:
+      secrets:
+        - private-repo
+      prologue:
+        - ssh-add ~/.keys/*
+        - checkout
+        - bundle install
+      jobs:
+        - name: Test
+          commands:
+            - ruby test.rb
