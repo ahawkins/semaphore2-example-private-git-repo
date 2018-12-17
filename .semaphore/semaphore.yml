@@ -9,7 +9,7 @@ blocks:
   - name: "Test"
     task:
       secrets:
-        - private-repo
+        - name: private-repo
       prologue:
         commands:
           - ssh-add ~/.keys/*
