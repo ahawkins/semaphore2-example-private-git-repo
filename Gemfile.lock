@@ -1,0 +1,20 @@
+GIT
+  remote: git@github.com:ahawkins/semaphore2-private-gem
+  revision: 60d145de2dd46d1ddbb21e12455286b04620e277
+  specs:
+    demo (1.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.11.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  demo!
+  minitest
+
+BUNDLED WITH
+   1.16.3
