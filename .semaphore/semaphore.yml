@@ -11,9 +11,10 @@ blocks:
       secrets:
         - private-repo
       prologue:
-        - ssh-add ~/.keys/*
-        - checkout
-        - bundle install
+        commands:
+          - ssh-add ~/.keys/*
+          - checkout
+          - bundle install
       jobs:
         - name: Test
           commands:
