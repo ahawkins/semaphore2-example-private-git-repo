@@ -12,6 +12,7 @@ blocks:
         - name: private-repo
       prologue:
         commands:
+          - chmod 0400 ~/.keys/*
           - ssh-add ~/.keys/*
           - checkout
           - bundle install
